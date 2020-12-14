@@ -72,6 +72,8 @@ it's a JavaScript functions that input props and returns HTML(UI)
 
 > Properties(Props) ==>   Java Script Function  ==> return HTML(JSX)
 
+to connect the function with the application 
+
 we should export the component with 
 ```javascript 
 export default nameOfTheFunction
@@ -80,8 +82,24 @@ and then export it in the main Javascript file
 ```javascript 
 import nameOfTheFunction from ./source
 ```
+### Class Component 
+it's a ES6 class who recieve Props and returns HTML(JSX
+) and who can also maintain a private internal state and Complex UI logic
 
+> Properties(Props) ==>   ES6 Class (State)  ==> return HTML(JSX)
 
+a class component should import react AND Component first from React library
+```javascript 
+import React, {Component} from 'react'
+```
+and a render method which returns null or some HTML 
+```javascript 
+render(){
+    returns HTML
+}
+export default nameOf
+```
+### JSX
 
 
 
