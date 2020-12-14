@@ -67,7 +67,7 @@ export default nameOfTheFunction
     - Stateless Functional Components (with Hooks ..)
     - Stateful class Components 
 
-### Functional Components :
+### Functional Components (rfce):
 it's a JavaScript functions that input props and returns HTML(UI)
 
 > Properties(Props) ==>   Java Script Function  ==> return HTML(JSX)
@@ -99,7 +99,7 @@ render(){
 }
 export default nameOf
 ```
-### JSX
+## JSX
 javascript HTML(JSX) 
 
 extention to write XML like code for elements and componenets 
@@ -115,19 +115,19 @@ EXAMPLE:
     React.createElement('h1',{id:'idhello', className: 'dumClass'},'Hello Ramzi'))
 
 ```
-JSX differences
+### JSX differences
 - class is a reserved word in JavaScript so we should use **className** for CSS properties 
 - for -> htmlFor
 - camelCase property naming 
     - onclick -> onClick
     - tabindex -> tabIndex
 - JSX should contain one wrapped html element 
-```
+```js
 <div> 
     <h1/> <p/> ...
 </div>
 ```
-### Props
+## Props
 is the optional input that the component can accept
 
 allow to the component to be dynamic
@@ -136,19 +136,19 @@ props are immutable, props data is read-only they which means that data coming f
 
 - in **Functional Component** we should add props in function's parameter
     - we are able to use data coming from parent component like this line of code
-    ```
+    ```javascript
     <h1>Hello {props.name} known as {props.heroname}</h1>
             {props.children}
     ```
     props.children render content between opening and closing tag of the component 
 - in **class Component** it's the same with functional but we must add this before props.dataName
-    - // // // line of code:
-    ```
+    - //same //same // line of code:
+    ```js
     <h1>Hello {this.props.name} known as {this.props.heroname}</h1>
             {this.props.children}
     ```
 
-### State
+## State
 same as props, state hold informations that influnces the UI in the browser except that 
     - the state is managed within the component
     - variable are declared & can **change** in function body
@@ -162,7 +162,7 @@ same as props, state hold informations that influnces the UI in the browser exce
 ### Props vs State 
 ![props vs state](https://i.imgur.com/fFZA5nF.png)
 
-### setState
+## setState
 >**rconst** snippet to create constructor
 
 setState method is a asynchronous method, and it has two parameter 
@@ -192,3 +192,12 @@ Destructuring is a convenient way of accessing multiple properties stored in obj
 and then we delete (this.props/this.state) in the render HTML
 
 ## Event Handling
+- in **functional component** we create a function and pass it inside onClick of the tag Button without calling the function clickHandlerit 'without parentheses()"
+```js
+    <button onClick={functionName}>Click</button>
+```
+- in **class component** it's the same as functional except when we pass the click handler function in onClick, we must add this keyword
+```js
+    <button onClick={this.FunClickHandler}>Click</button>
+```
+
