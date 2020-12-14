@@ -143,15 +143,23 @@ props are immutable, props data is read-only they which means that data coming f
     props.children render content between opening and closing tag of the component 
 - in **class Component** it's the same with functional but we must add this before props.dataName
     - // // // line of code:
-      ```
+    ```
     <h1>Hello {this.props.name} known as {this.props.heroname}</h1>
             {this.props.children}
     ```
 
+### State
+same as props, state hold informations that influnces the UI in the browser except that 
+    - the state is managed within the component
+    - variable are declared & can **change** in function body
 
+**Step 1 Create a state object and initialize it**:
+ we create a constructor class and we call in it a super() method and then we create state object with this and then initialize the object with **this** key
 
+ **Step2 bind state value in the render function like props**:
+ with {this.state.initializedVariable}
 
-
+### Props vs State 
 
 
 ## Event Handling
