@@ -182,6 +182,13 @@ setState method is a asynchronous method, and it has two parameter
 
 > note: if we need to excute some code after the state has been changed we mustn't place it after the state method, instead we place it within the collback function
 
+### Destructuring props and state
 
+Destructuring is a convenient way of accessing multiple properties stored in objects and arrays... When used, destructuring does not modify an object or array but rather copies the desired items from those data structures into variables. These new **variables can be accessed** later on in a **React component**.
+
+- in **functional component** we just need to change props into ({param1,param2}) OR declare const {param1,param2}= props
+- in **class component** we declare const {param1,param2}= state
+
+and then we delete (this.props/this.state) in the render HTML
 
 ## Event Handling
