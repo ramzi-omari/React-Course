@@ -200,4 +200,34 @@ and then we delete (this.props/this.state) in the render HTML
 ```js
     <button onClick={this.FunClickHandler}>Click</button>
 ```
+## Binding Event Handlers
 
+> note : when we use an arrow function, the event handler is automatically bound to the component instance so we don’t need to bind it in the constructor.
+
+1- **Binding in the render method**(TOO RISKY) no big impact in small App but it could be troublesome in large App and components that contains nested components:
+```js
+<button onClick={this.funcClickHandlerName.bind(this)}>click</button>
+```
+2- **Arrow funtions**(TOO RISKY except if the code doesn't invovle rerendering nested children componenets) :
+
+calling event handler "funcClickHandlerName()" in arrow function body and the value will be returned that's why we add the func call '()'
+```js
+<button onClick={() => this.funcClickHandlerName()}>click</button>
+```
+3- binding the event handler in the constructor by add a line of code, and then the normal call in button
+```js
+this.funcClickHandlerName = this.funcClickHandlerName.bind(this)
+then 
+<button onClick={this.funcClickHandlername}>Click</button>
+
+```
+4- use an arrow function as a class property,, we change the way we define our method in the class
+```js
+ clickHandler = () =>{  
+     this.setState({
+        message: "BYE"
+     })
+   }
+```
+
+3&4 are by suggested **react documentation** but 4th is under experimentation
