@@ -121,6 +121,37 @@ JSX differences
 - camelCase property naming 
     - onclick -> onClick
     - tabindex -> tabIndex
+- JSX should contain one wrapped html element 
+```
+<div> 
+    <h1/> <p/> ...
+</div>
+```
+### Props
+is the optional input that the component can accept
+
+allow to the component to be dynamic
+
+props are immutable, props data is read-only they which means that data coming from the parent should not be changed by child components.  we cannot change it with props.name = "ram" in child component 
+
+- in **Functional Component** we should add props in function's parameter
+    - we are able to use data coming from parent component like this line of code
+    ```
+    <h1>Hello {props.name} known as {props.heroname}</h1>
+            {props.children}
+    ```
+    props.children render content between opening and closing tag of the component 
+- in **class Component** it's the same with functional but we must add this before props.dataName
+    - // // // line of code:
+      ```
+    <h1>Hello {this.props.name} known as {this.props.heroname}</h1>
+            {this.props.children}
+    ```
+
+
+
+
+
 
 
 ## Event Handling
