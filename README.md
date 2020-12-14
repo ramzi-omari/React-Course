@@ -100,7 +100,27 @@ render(){
 export default nameOf
 ```
 ### JSX
+javascript HTML(JSX) 
 
+extention to write XML like code for elements and componenets 
+
+JSX is not a necessity to write React but it makes code simpler and elegent
+
+with JSX we use html syntaxe directly but without it we should code like this 
+```
+return React.createElement(tag ['div','h1'..] , properties[id:,class:..] ,
+ the Render ['Hello Ramzi'])
+EXAMPLE:
+     return React.createElement('div',null,
+    React.createElement('h1',{id:'idhello', className: 'dumClass'},'Hello Ramzi'))
+
+```
+JSX differences
+- class is a reserved word in JavaScript so we should use **className** for CSS properties 
+- for -> htmlFor
+- camelCase property naming 
+    - onclick -> onClick
+    - tabindex -> tabIndex
 
 
 ## Event Handling
