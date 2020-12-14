@@ -82,7 +82,7 @@ and then export it in the main Javascript file
 ```javascript 
 import nameOfTheFunction from ./source
 ```
-### Class Component 
+### Class Component (rce+tab)
 it's a ES6 class who recieve Props and returns HTML(JSX
 ) and who can also maintain a private internal state and Complex UI logic
 
@@ -160,6 +160,28 @@ same as props, state hold informations that influnces the UI in the browser exce
  with {this.state.initializedVariable}
 
 ### Props vs State 
+![props vs state](https://i.imgur.com/fFZA5nF.png)
+
+### setState
+>**rconst** snippet to create constructor
+
+setState method is a asynchronous method, and it has two parameter 
+- the state object
+- collback function
+
+> note1: never modify state directly, we use instead use setState
+
+> note2: if we have to update a state based on the previous state we must pass a function as an argument instead of the regular object 
+
+ 
+- we initialise variable count to 0
+
+- we create a button and listen to the click event 'onClick' which has a function
+
+- then we define our function which contain this.setState
+
+> note: if we need to excute some code after the state has been changed we mustn't place it after the state method, instead we place it within the collback function
+
 
 
 ## Event Handling
