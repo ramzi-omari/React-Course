@@ -269,3 +269,18 @@ The conditional (ternary) operator is the only JavaScript operator that takes th
 4- Short circuit operator (when we might render something or nothing)
         // if the expression in the left of && is false, the right one will not be evaluated  
 
+## List Rendering 
+render list of objects 
+in the project 
+instead of coding a complex JSX we create Person.js and then we set the reference between the two files
+
+>**Keys keyword** help React identify which items have changed (added/removed/re-ordered). To give a unique identity to every element inside the array, a key is required.
+
+>**Index keyword**:
+
+1. the items in the list do not have a unique id 
+
+2. the list is a static list and will not change
+
+2. the list will never be reordered of filtered
+
