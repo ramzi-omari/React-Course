@@ -251,3 +251,21 @@ we pass a reference of the method as a prop
 and then we incorporate this parameter in the parent method
 ```methodName(childName){....code..}```
 
+### Conditional Rendering 
+**(UserGreeting.js)** 
+
+Conditional rendering as a term describes the ability to render different UI markup based on certain conditions. In React-speak, it is a way to render different elements or components based on a condition.
+
+1- if/else 
+
+
+
+2- Element variables
+
+3- Ternary conditional operator: (the best one)
+
+The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is falsy.
+
+4- Short circuit operator (when we might render something or nothing)
+        // if the expression in the left of && is false, the right one will not be evaluated  
+
