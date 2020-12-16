@@ -231,3 +231,23 @@ then
 ```
 
 3&4 are by suggested **react documentation** but 4th is under experimentation
+
+## Methods as props 
+
+child component communicate with parent component, to do that we pass in reference to a method as props to the child component
+
+1- we include the parent component in the render method (in the global render)
+
+2- we include the child component's Tag in the render method (in parentComponent) with an attribute 'nameAttribute' and to this attribute we assign the Parent method we defined before that 'methodName'  ```<... nameAttribute = {this.methodName} />```
+we pass a reference of the method as a prop
+
+3-access this reference (the method) in the child component's button // so we add props as a parameter and we pass the method as props object props.nameAttribute
+      
+``` <button onClick={props.nameAttribute}>Greet Parent</button> ```
+
+4- to pass a parameter when we call the parent's method from the child we use arrow function to pass a parameter from child to parent
+```<button onClick={() => props.nameAttribute('child')}>Greet Parent</button>```
+
+and then we incorporate this parameter in the parent method
+```methodName(childName){....code..}```
+
