@@ -413,3 +413,15 @@ LifecycleA componentDidUpdate
 React fragments let you group a list of children without adding extra nodes to the DOM because fragments are not rendered to the DOM. So basically we use React. Fragment where we would normally use a wrapper div.
 
 >we can use `<></>` instead of `<React.Fragment>` except that we can't use `key` attribute
+
+## Pure Components
+used to prevent unnecessary renders and get a good performance boost
+
+    | Regular Component    | Pure Component    | 
+    | ----------- | ----------- | 
+    | A regular component does not implement the shouldComponentUpdate method. it always returns true by default | a pure component on the other hand implements shouldComponenetUpdate with a shallow props and state comparaison | 
+
+>in other words: a pure component check the previous prop before re-render, if it's the same it's will not be re-render,, regular component does not implement the check so it'll always re-render
+
+
+

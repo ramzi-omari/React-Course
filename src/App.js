@@ -20,6 +20,8 @@ import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
 import FragmentDemo from './Advanced/FragmentDemo';
 import Table from './Advanced/Table';
+import PureComp from './Advanced/PureComp';
+import ParentComp from './Advanced/ParentComp';
 
 
 class App extends Component {
@@ -69,6 +71,8 @@ class App extends Component {
 
         <FragmentDemo></FragmentDemo>
         <Table></Table>
+        <ParentComp></ParentComp>
+
     </div>   
   );
 }}
