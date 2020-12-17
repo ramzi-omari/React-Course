@@ -419,9 +419,12 @@ used to prevent unnecessary renders and get a good performance boost
 
     | Regular Component    | Pure Component    | 
     | ----------- | ----------- | 
-    | A regular component does not implement the shouldComponentUpdate method. it always returns true by default | a pure component on the other hand implements shouldComponenetUpdate with a shallow props and state comparaison | 
+    | A regular component does not implement the shouldComponentUpdate method. it always returns true by default 
+    | a pure component on the other hand implements shouldComponenetUpdate with a shallow props and state comparaison | 
 
 >in other words: a pure component check the previous prop before re-render, if it's the same it's will not be re-render,, regular component does not implement the check so it'll always re-render
 
+## Memo components
 
+Similar to pure component but it works with **Functional Components**
 
