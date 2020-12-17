@@ -284,3 +284,14 @@ instead of coding a complex JSX we create Person.js and then we set the referenc
 
 2. the list will never be reordered of filtered
 
+## Styling with CSS
+
+there's 4 method to add style to react component
+
+1- **regular Stylesheet**
+
+2- **Inline styling**:  An inline CSS is used to apply a unique style to a single HTML element. An inline CSS uses the style attribute of an HTML element.
+
+3- **CSS Modules :**  A CSS Module is a CSS file in which all class names and animation names are scoped locally by default. The key words here are scoped locally. With CSS Modules, your CSS class names become similar to local variables in JavaScript. 
+
+4- **CSS in Libraries**
