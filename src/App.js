@@ -16,6 +16,7 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
+import Form from './components/Form';
 
 
 class App extends Component {
@@ -54,7 +55,9 @@ class App extends Component {
         <Inline></Inline>
 
         <h1 className='error'>Error</h1> 
-        <h1 className={styles.success}>Success</h1>        
+        <h1 className={styles.success}>Success</h1>    
+
+        <Form></Form>
     </div>   
   );
 }}

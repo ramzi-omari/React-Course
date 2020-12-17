@@ -295,3 +295,14 @@ there's 4 method to add style to react component
 3- **CSS Modules :**  A CSS Module is a CSS file in which all class names and animation names are scoped locally by default. The key words here are scoped locally. With CSS Modules, your CSS class names become similar to local variables in JavaScript. 
 
 4- **CSS in Libraries**
+
+## Basics form handling
+1- add the HTML element
+
+2- assign the component state to an element 'value' (this.state.value)
+
+3- assign an onChange handler that updates the state
+
+>A Controlled Component is one that takes its current value through props and notifies changes through callbacks like onChange . A parent component "controls" it by handling the callback and managing its own state and passing the new values as props to the controlled component.
+
+**explanation:** our state property created in the constructor which is supplied as a value to an attribute in the input element (in our case 'value attribut'),, whenever there is a change the new value is set to (onChange attribut) arrow function where the value will sets (with setState),, then the render method is called again with the new value he state property
