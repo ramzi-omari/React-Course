@@ -18,11 +18,14 @@ import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
+import FragmentDemo from './Advanced/FragmentDemo';
+import Table from './Advanced/Table';
 
 
 class App extends Component {
   render(){
   return (
+    // Fundamentals 
     <div className="App">
         <Greet></Greet>
         <Welcome></Welcome>
@@ -61,7 +64,11 @@ class App extends Component {
         <Form></Form>
 
         <LifecycleA></LifecycleA>
-        
+
+        {/* Advanced Topics */}
+
+        <FragmentDemo></FragmentDemo>
+        <Table></Table>
     </div>   
   );
 }}

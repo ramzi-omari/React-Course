@@ -1,6 +1,6 @@
 # React course/features:
 here i'll add setup command
-## Sections
+# Sections
 - [Headers](#linkheaders)
 
 before that, there's some sections : 
@@ -54,7 +54,7 @@ then
 6. useCounter Custom Hook
 5. useInput Custom Hook
 
-## 
+# Fundamentals
 ```javascript 
 import React from 'react' 
 export default nameOfTheFunction
@@ -388,9 +388,28 @@ builted method available for class component (there'r no methods for functional 
 * performe clean up tasks like: Cancelling any network requests, remobing event handlers, cancelling any subscriptions and also invalidating timers
 * `things to avoid`: Do not call setState method 
 
+### Priorities
+LifecycleA getDerivedStateFRomProps 
+LifecycleA shouldComponentUpdate 
+lifeCycleA render 
+LifecycleB getDerivedStateFRomProps 
+LifecycleB shouldComponentUpdate 
+lifeCycleB render 
+LifecycleB getSnapshotBeforeUpdate 
+LifecycleA getSnapshotBeforeUpdate 
+LifecycleB componentDidUpdate 
+LifecycleA componentDidUpdate
+
 ### Error Handling ('ll be completed in Error boundaries part)
 
 1- **static getDerivedStateFromError(error)**
 2- **componentDidCatch(error,info)**
 >the two methods are called when there is an error either during rendering, in a lifecycle method, or in the constructor of any child
 
+
+# Advanced topics
+
+## Fragments 
+React fragments let you group a list of children without adding extra nodes to the DOM because fragments are not rendered to the DOM. So basically we use React. Fragment where we would normally use a wrapper div.
+
+>we can use `<></>` instead of `<React.Fragment>` except that we can't use `key` attribute
