@@ -306,3 +306,91 @@ there's 4 method to add style to react component
 >A Controlled Component is one that takes its current value through props and notifies changes through callbacks like onChange . A parent component "controls" it by handling the callback and managing its own state and passing the new values as props to the controlled component.
 
 **explanation:** our state property created in the constructor which is supplied as a value to an attribute in the input element (in our case 'value attribut'),, whenever there is a change the new value is set to (onChange attribut) arrow function where the value will sets (with setState),, then the render method is called again with the new value he state property
+
+## Lifecycle Methods 
+
+The main job of React is to figure out how to modify the DOM to match what the components want to be rendered on the screen. React does so by `mounting` (adding nodes to the DOM), 
+`unmounting` (removing them from the DOM), and `updating` (making changes to nodes already in the DOM) ++ `Error Handling` (when there's an error during rendering, in a lifecycle method, in the constructor or any child component).
+
+builted method available for class component (there'r no methods for functional component):
+
+1- **Mounting** : constructor, static getDerivedStateFromProps, render and componentDidMount
+
+2- **Updating** : static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate
+
+3- **Unmounting** : componentWillUnmount
+
+4- **Error Handling** : static getDerivedStateFromError and componentDidCatch
+
+
+### Mounting
+
+1- **constructor (props)**: 
+* A special function that will get called whenever a new component is created.
+* Initializing state / Binding the event handlers
+* `things to avoid`: Do not cause side effects. Ex: HTTP requests
+* only place where we can change or set state just by this.state=.. otherwise we must use setState
+* super(props) is essential to call the base class constructor 
+
+2- **static getDerivedStateFromProps(props,state)** (rarely used lifecycle method):
+* when the state of the component depends on changes in props over time.
+* set the state
+* `things to avoid`: Do not cause side effects. Ex: HTTP requests
+> static method do not have access to `this` keyword
+
+3- **render()**: 
+* the only required method
+* Read props & state and return JSX
+* `things to avoid`: Do not change state or interact with DOM or make ajax calls
+* since JSX is used, children components lifecycle methods are also executed 
+
+4- **componentDidMount()**: 
+* Invoked immediately after a component and all its children components have been rendered to the DOM
+* Cause side effects. Ex: Interact with the DOM or perform any ajax calls to load data.
+
+>**Ordre of execution**
+1-constructor 2- getDerivedStateFromProps 3- render 4- method of childs component in the same order 5- componentDidMount()
+
+### Updating
+
+1- **static getDerivedStateFromProps(props,state)** (rarely used lifecycle method):
+* called everytime a component is re-rendered
+* set the state
+* `things to avoid`: Do not cause side effects. Ex: HTTP requests
+> static method do not have access to `this` keyword
+
+2- **shouldComponentUpdate(nextProps, nextState)**(rarely used):
+* Dictates if the component should re-render or not
+* Performance optimization
+* `things to avoid`: Do not cause side effects. Ex: HTTP requests / Calling the setState method
+
+3- **render()**: 
+* the only required method
+* Read props & state and return JSX
+* `things to avoid`: Do not change state or interact with DOM or make ajax calls
+* since JSX is used, children components lifecycle methods are also executed 
+
+4- **getSnapshotBeforeUpdate(prevProps, prevState)** (rarely used):
+
+* Called right before the changes from the virtual DOM are to be reflected in the DOM
+* Capture some information from the DOM
+* Method will either return null or return a value. Returned value will be passed as the third parameter to the next method
+
+5- **componentDidUpdate(prefProps, prevState, snapshot)**:
+
+* Called afetr the render is finished in the re-render cycles
+* Cause side effect.  >NB: we need to compare the previous props with the new props and then decide whether to make the Ajax call or not 
+
+### Unmounting
+
+1- **componentWillUnmount()**:
+* Method is invoked immediately before a component is unmounted and destroyed.
+* performe clean up tasks like: Cancelling any network requests, remobing event handlers, cancelling any subscriptions and also invalidating timers
+* `things to avoid`: Do not call setState method 
+
+### Error Handling ('ll be completed in Error boundaries part)
+
+1- **static getDerivedStateFromError(error)**
+2- **componentDidCatch(error,info)**
+>the two methods are called when there is an error either during rendering, in a lifecycle method, or in the constructor of any child
+
