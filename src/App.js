@@ -26,6 +26,8 @@ import Refs from './Advanced/Refs';
 import FocusInput from './Advanced/FocusInput';
 import FRParentInput from './Advanced/FRParentInput';
 import PortalDemo from './Advanced/PortalDemo';
+import Hero from './Advanced/Hero';
+import ErrorBoundary from './Advanced/ErrorBoundary';
 
 
 class App extends Component {
@@ -81,7 +83,15 @@ class App extends Component {
         <FRParentInput></FRParentInput>
 
         <PortalDemo></PortalDemo>
-
+        <ErrorBoundary>
+          <Hero heroName='Batman'></Hero>
+          </ErrorBoundary>
+          <ErrorBoundary>
+          <Hero heroName='Superman'></Hero>
+          </ErrorBoundary>
+          <ErrorBoundary>
+          <Hero heroName='Joker'></Hero>
+          </ErrorBoundary>
     </div>   
   );
 }}

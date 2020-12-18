@@ -452,3 +452,19 @@ it's used to avoid problems like that when showing pop-up
 ![props vs state](https://i.imgur.com/VADZYE3.png)
 
 src: https://reactjs.org/docs/portals.html
+
+## Error Boundary
+
+ a class component that implements either one of both of the lifecycle method becomes an **error boundary**
+
+ 1- **the static method getDerivedStateFromError** is used to render a fallback UI after an error is thrown 
+ > We wrap every tag to get the other renders(tags) and the error message only for the tag which has an error
+
+ 2- **the componentDidCatch** method is used to log the error information
+
+ > Boundaries catch error during **render** in **lifecycle methods** and in the **constructors** of the whole tree below them
+
+> they do not catch error inside **event handlers** we need to use the regular **try catch** statements
+
+
+
