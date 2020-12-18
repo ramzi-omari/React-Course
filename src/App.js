@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -30,30 +30,33 @@ import Hero from './Advanced/Hero';
 import ErrorBoundary from './Advanced/ErrorBoundary';
 import ClickCounter from './Advanced/ClickCounter';
 import HoverCounter from './Advanced/HoverCounter';
+import ClickCounterTwo from './Advanced/ClickCounterTwo';
+import HoverCounterTwo from './Advanced/HoverCounterTwo';
+import User from './Advanced/User';
 
 
 class App extends Component {
-  render(){
-  return (
-    // Fundamentals 
-    <div className="App">
+  render() {
+    return (
+      // Fundamentals 
+      <div className="App">
         <Greet></Greet>
         <Welcome></Welcome>
         <Hello></Hello>
         {/* props functionnal component */}
-        <Greet name="ramzi" heroname= "suuper">
+        <Greet name="ramzi" heroname="suuper">
           <p> this's children props</p>
         </Greet>
-        <Greet name="clark" heroname= "wonder">
+        <Greet name="clark" heroname="wonder">
           <button>children button</button>
           <p>children props</p>
         </Greet>
         <Greet name="Diana"></Greet>
         {/* props class component  */}
-        <Welcome name="ramzi" heroname= "suuper">
+        <Welcome name="ramzi" heroname="suuper">
           <p>loool</p> <p>children props in class component</p>
         </Welcome>
-        <Welcome name="clark" heroname= "wonder"></Welcome>
+        <Welcome name="clark" heroname="wonder"></Welcome>
 
         {/* State */}
 
@@ -68,8 +71,8 @@ class App extends Component {
         <Stylesheet primary={true} ></Stylesheet>
         <Inline></Inline>
 
-        <h1 className='error'>Error</h1> 
-        <h1 className={styles.success}>Success</h1>    
+        <h1 className='error'>Error</h1>
+        <h1 className={styles.success}>Success</h1>
 
         <Form></Form>
 
@@ -87,18 +90,36 @@ class App extends Component {
         <PortalDemo></PortalDemo>
         <ErrorBoundary>
           <Hero heroName='Batman'></Hero>
-          </ErrorBoundary>
-          <ErrorBoundary>
+        </ErrorBoundary>
+        <ErrorBoundary>
           <Hero heroName='Superman'></Hero>
-          </ErrorBoundary>
-          <ErrorBoundary>
+        </ErrorBoundary>
+        <ErrorBoundary>
           <Hero heroName='Joker'></Hero>
-          </ErrorBoundary>
+        </ErrorBoundary>
+        {/* higher order components */}
+        <ClickCounter name='Ramzi' secName='Omari'></ClickCounter>
+        <HoverCounter></HoverCounter>
+        {/* render props */}
+          <ClickCounterTwo></ClickCounterTwo>
+          <HoverCounterTwo></HoverCounterTwo>
+          <User render={(isLoggedIn)=> isLoggedIn? 'ramziiii': 'Guest'}></User>
 
-          <ClickCounter name='Ramzi' secName='Omari'></ClickCounter>
-          <HoverCounter></HoverCounter>
-    </div>   
-  );
-}}
+        <Counter 
+         render={(count, incrementCount) => (
+         <ClickCounterTwo count={count} incrementCount={incrementCount} />
+         )}
+        ></Counter>
+        <Counter 
+         render={(count, incrementCount) => (
+         <HoverCounterTwo count={count} incrementCount={incrementCount} />
+         )}
+        ></Counter>        
+
+        	
+      </div>
+    );
+  }
+}
 
 export default App;
