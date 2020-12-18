@@ -441,3 +441,14 @@ Refs are created using React. createRef() , and are assigned to class properties
 ### Forwarding Refs 
 
 Ref forwarding is a technique for automatically passing a ref through a component to one of its children. This is typically not necessary for most components in the application. However, it can be useful for some kinds of components, especially in reusable component libraries.
+
+## Portals
+
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
+The first argument (child) is any renderable React child, such as an element, string, or fragment. The second argument (container) is a DOM element.
+
+it's used to avoid problems like that when showing pop-up
+![props vs state](https://i.imgur.com/VADZYE3.png)
+
+src: https://reactjs.org/docs/portals.html

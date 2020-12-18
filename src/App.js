@@ -25,6 +25,7 @@ import ParentComp from './Advanced/ParentComp';
 import Refs from './Advanced/Refs';
 import FocusInput from './Advanced/FocusInput';
 import FRParentInput from './Advanced/FRParentInput';
+import PortalDemo from './Advanced/PortalDemo';
 
 
 class App extends Component {
@@ -78,6 +79,8 @@ class App extends Component {
         <Refs></Refs>
         <FocusInput></FocusInput>
         <FRParentInput></FRParentInput>
+
+        <PortalDemo></PortalDemo>
 
     </div>   
   );
