@@ -428,3 +428,16 @@ used to prevent unnecessary renders and get a good performance boost
 
 Similar to pure component but it works with **Functional Components**
 
+## Refs
+
+Refs are created using React. createRef() , and are assigned to class properties. In the above example the ref is named myRef , which is then attached to an **< input>** DOM element. Once a ref is attached to an element, that element can then be accessed and modified through the ref.
+
+* createRef approach access with this.referenceVariable.current.focus()
+* Callback approach  access with this.referenceVariable.focus()
+
+### Refs with class components
+
+
+### Forwarding Refs 
+
+Ref forwarding is a technique for automatically passing a ref through a component to one of its children. This is typically not necessary for most components in the application. However, it can be useful for some kinds of components, especially in reusable component libraries.

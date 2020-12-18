@@ -22,6 +22,9 @@ import FragmentDemo from './Advanced/FragmentDemo';
 import Table from './Advanced/Table';
 import PureComp from './Advanced/PureComp';
 import ParentComp from './Advanced/ParentComp';
+import Refs from './Advanced/Refs';
+import FocusInput from './Advanced/FocusInput';
+import FRParentInput from './Advanced/FRParentInput';
 
 
 class App extends Component {
@@ -71,7 +74,10 @@ class App extends Component {
 
         <FragmentDemo></FragmentDemo>
         <Table></Table>
-        <ParentComp></ParentComp>
+        <ParentComp></ParentComp>export
+        <Refs></Refs>
+        <FocusInput></FocusInput>
+        <FRParentInput></FRParentInput>
 
     </div>   
   );
