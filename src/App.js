@@ -28,6 +28,8 @@ import FRParentInput from './Advanced/FRParentInput';
 import PortalDemo from './Advanced/PortalDemo';
 import Hero from './Advanced/Hero';
 import ErrorBoundary from './Advanced/ErrorBoundary';
+import ClickCounter from './Advanced/ClickCounter';
+import HoverCounter from './Advanced/HoverCounter';
 
 
 class App extends Component {
@@ -92,6 +94,9 @@ class App extends Component {
           <ErrorBoundary>
           <Hero heroName='Joker'></Hero>
           </ErrorBoundary>
+
+          <ClickCounter name='Ramzi' secName='Omari'></ClickCounter>
+          <HoverCounter></HoverCounter>
     </div>   
   );
 }}

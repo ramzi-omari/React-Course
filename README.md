@@ -466,5 +466,16 @@ src: https://reactjs.org/docs/portals.html
 
 > they do not catch error inside **event handlers** we need to use the regular **try catch** statements
 
+## Higher Order Components 
+A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
 
+Concretely, a higher-order component is a function that takes a component as an argument and returns a new component // To share common functionality between components
+
+Example:
+```js
+const NewComponent = higherOrderComponent(originalComponent)
+const EnhancedComponent = higherOrderComponent(originalComponent)
+
+const IronMan = withSuit(TonyStark)
+```
 
